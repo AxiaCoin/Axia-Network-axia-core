@@ -12,7 +12,7 @@ repository = "https://github.com/axia-tech/axlib/"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-codec = { package = "axc-scale-codec", version = "2.0.0" }
+codec = { package = "axia-scale-codec", version = "2.0.0" }
 derive_more = "0.99.11"
 futures = "0.3.8"
 log = "0.4.11"

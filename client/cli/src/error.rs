@@ -40,7 +40,7 @@ pub enum Error {
 	Client(#[from] sp_blockchain::Error),
 
 	#[error(transparent)]
-	Codec(#[from] axc_scale_codec::Error),
+	Codec(#[from] axia_scale_codec::Error),
 
 	#[error("Invalid input: {0}")]
 	Input(String),

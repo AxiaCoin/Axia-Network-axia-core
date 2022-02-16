@@ -84,12 +84,12 @@ where
 }
 
 #[cfg(feature = "std")]
-impl<Address, Call, Signature, Extra> axc_util_mem::MallocSizeOf
+impl<Address, Call, Signature, Extra> axia_util_mem::MallocSizeOf
 	for UncheckedExtrinsic<Address, Call, Signature, Extra>
 where
 	Extra: SignedExtension,
 {
-	fn size_of(&self, _ops: &mut axc_util_mem::MallocSizeOfOps) -> usize {
+	fn size_of(&self, _ops: &mut axia_util_mem::MallocSizeOfOps) -> usize {
 		// Instantiated only in runtime.
 		0
 	}

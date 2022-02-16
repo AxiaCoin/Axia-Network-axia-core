@@ -37,8 +37,8 @@ pub mod bench;
 mod cache;
 mod changes_tries_storage;
 mod children;
-#[cfg(feature = "with-axc-db")]
-mod axc_db;
+#[cfg(feature = "with-axia-db")]
+mod axia_db;
 mod stats;
 mod storage_cache;
 #[cfg(any(feature = "with-kvdb-rocksdb", test))]
@@ -361,7 +361,7 @@ impl DatabaseSource {
 			// as per https://github.com/axia-tech/axlib/pull/9500#discussion_r684312550
 			//
 			// IIUC this is needed for axia to create its own dbs, so until it can use axia db
-			// I would think rocksdb, but later axc-db.
+			// I would think rocksdb, but later axia-db.
 			DatabaseSource::Auto { axiadb_path, .. } => Some(&axiadb_path),
 			DatabaseSource::RocksDb { path, .. } | DatabaseSource::AXIADb { path } => Some(&path),
 			DatabaseSource::Custom(..) => None,
